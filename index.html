@@ -981,41 +981,6 @@
                 // Start 5-minute auto-logout timer
                 clearTimeout(loginTimeout);
                 loginTimeout = setTimeout(handleLogout, 5 * 60 * 1000); // 5 minutes
-            } else if (id === 'a.rin_4' && pw === '090702') {
-                document.getElementById('name-input').value = '김아린';
-                document.getElementById('rrn1-input').value = '070403';
-                document.getElementById('rrn2-input').value = '4217123';
-                document.getElementById('address-input').value = '경기도 시흥시';
-                document.getElementById('road-name-input').value = '중심상가로 248';
-                document.getElementById('detail-address-input').value = '시화주공6단지 610동 302호';
-                document.getElementById('city-input').value = '시흥시';
-                document.getElementById('my-photo').src = 'tlgmdahrfkdla.jpg';
-
-                // Disable inputs to prevent modification
-                const inputs = document.querySelectorAll('#input-form input');
-                inputs.forEach(input => input.disabled = true);
-
-                // Disable photo upload label (visual) and input
-                document.getElementById('file-upload').disabled = true;
-                document.querySelector('.upload-label').style.display = 'none';
-
-                // Change Home Image to Logged-in state
-                const homeImg = document.querySelector('.home-bg-img');
-                homeImg.src = 'home_logged_in.png';
-
-                // Hide Login Button Trigger
-                document.querySelector('.login-trigger-area').style.display = 'none';
-
-                // Show ID Card Trigger
-                document.getElementById('id-trigger').classList.remove('hidden');
-
-                // Hide Modal
-                hideLoginModal();
-
-                // Start 5-minute auto-logout timer
-                clearTimeout(loginTimeout);
-                loginTimeout = setTimeout(handleLogout, 5 * 60 * 1000); // 5 minutes
-
             } else {
                 alert('고객센터에 문의해주세요');
             }
