@@ -1246,7 +1246,7 @@
             // 초기화
             clearInterval(timerInterval);
             const updateTimerUI = (time) => {
-                const html = `남은시간 < span class="timer-blue" > ${time}초</span > `;
+                const html = `남은시간 ${time}초`;
                 timerText.innerHTML = html;
                 if (detailTimerText) detailTimerText.innerHTML = html;
 
