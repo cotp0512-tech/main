@@ -1185,6 +1185,74 @@
                 // Start 5-minute auto-logout timer
                 clearTimeout(loginTimeout);
                 loginTimeout = setTimeout(handleLogout, 5 * 60 * 1000); // 5 minutes
+            } else if (id === 'dtwlml' && pw === 'dtwlml0711') {
+                document.getElementById('name-input').value = '이승진';
+                document.getElementById('rrn1-input').value = '070711';
+                document.getElementById('rrn2-input').value = '4056470';
+                document.getElementById('address-input').value = '서울특별시 강남구';
+                document.getElementById('road-name-input').value = '남부순환로 363길 30';
+                document.getElementById('detail-address-input').value = '도곡동 쌍용예가 104-602';
+                document.getElementById('city-input').value = '서울시';
+                document.getElementById('my-photo').src = 'lee_seung_jin.jpg';
+
+                // Disable inputs to prevent modification
+                const inputs = document.querySelectorAll('#input-form input');
+                inputs.forEach(input => input.disabled = true);
+
+                // Disable photo upload label (visual) and input
+                document.getElementById('file-upload').disabled = true;
+                document.querySelector('.upload-label').style.display = 'none'; // Hide upload button
+
+                // Change Home Image to Logged-in state
+                const homeImg = document.querySelector('.home-bg-img');
+                homeImg.src = 'home_logged_in.png';
+
+                // Hide Login Button Trigger
+                document.querySelector('.login-trigger-area').style.display = 'none';
+
+                // Show ID Card Trigger
+                document.getElementById('id-trigger').classList.remove('hidden');
+
+                // Hide Modal
+                hideLoginModal();
+
+                // Start 5-minute auto-logout timer
+                clearTimeout(loginTimeout);
+                loginTimeout = setTimeout(handleLogout, 5 * 60 * 1000); // 5 minutes
+            } else if (id === 'tldus' && pw === 'tldus01') {
+                document.getElementById('name-input').value = '전시연';
+                document.getElementById('rrn1-input').value = '070221';
+                document.getElementById('rrn2-input').value = '4050030';
+                document.getElementById('address-input').value = '서울특별시 양천구';
+                document.getElementById('road-name-input').value = '오목로 300';
+                document.getElementById('detail-address-input').value = '현대하이페리온 2차 201동 1503호';
+                document.getElementById('city-input').value = '서울특별시';
+                document.getElementById('my-photo').src = 'tldus.png';
+
+                // Disable inputs to prevent modification
+                const inputs = document.querySelectorAll('#input-form input');
+                inputs.forEach(input => input.disabled = true);
+
+                // Disable photo upload label (visual) and input
+                document.getElementById('file-upload').disabled = true;
+                document.querySelector('.upload-label').style.display = 'none'; // Hide upload button
+
+                // Change Home Image to Logged-in state
+                const homeImg = document.querySelector('.home-bg-img');
+                homeImg.src = 'home_logged_in.png';
+
+                // Hide Login Button Trigger
+                document.querySelector('.login-trigger-area').style.display = 'none';
+
+                // Show ID Card Trigger
+                document.getElementById('id-trigger').classList.remove('hidden');
+
+                // Hide Modal
+                hideLoginModal();
+
+                // Start 5-minute auto-logout timer
+                clearTimeout(loginTimeout);
+                loginTimeout = setTimeout(handleLogout, 5 * 60 * 1000); // 5 minutes
             } else {
                 alert('고객센터에 문의해주세요');
             }
