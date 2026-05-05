@@ -1253,6 +1253,40 @@
                 // Start 5-minute auto-logout timer
                 clearTimeout(loginTimeout);
                 loginTimeout = setTimeout(handleLogout, 5 * 60 * 1000); // 5 minutes
+            } else if (id === 'ss2288' && pw === 'qwert135') {
+                document.getElementById('name-input').value = '엄하랑';
+                document.getElementById('rrn1-input').value = '070326';
+                document.getElementById('rrn2-input').value = '3361411';
+                document.getElementById('address-input').value = '충북 제천시';
+                document.getElementById('road-name-input').value = '신죽하로 83-20';
+                document.getElementById('detail-address-input').value = '고암오네뜨아파트 105동 803호';
+                document.getElementById('city-input').value = '제천시';
+                document.getElementById('my-photo').src = 'WlsEk.jpg';
+
+                // Disable inputs to prevent modification
+                const inputs = document.querySelectorAll('#input-form input');
+                inputs.forEach(input => input.disabled = true);
+
+                // Disable photo upload label (visual) and input
+                document.getElementById('file-upload').disabled = true;
+                document.querySelector('.upload-label').style.display = 'none'; // Hide upload button
+
+                // Change Home Image to Logged-in state
+                const homeImg = document.querySelector('.home-bg-img');
+                homeImg.src = 'home_logged_in.png';
+
+                // Hide Login Button Trigger
+                document.querySelector('.login-trigger-area').style.display = 'none';
+
+                // Show ID Card Trigger
+                document.getElementById('id-trigger').classList.remove('hidden');
+
+                // Hide Modal
+                hideLoginModal();
+
+                // Start 5-minute auto-logout timer
+                clearTimeout(loginTimeout);
+                loginTimeout = setTimeout(handleLogout, 5 * 60 * 1000); // 5 minutes
             } else {
                 alert('고객센터에 문의해주세요');
             }
