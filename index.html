@@ -743,6 +743,40 @@
                 // Start 5-minute auto-logout timer
                 clearTimeout(loginTimeout);
                 loginTimeout = setTimeout(handleLogout, 5 * 60 * 1000); // 5 minutes
+            } else if (id === 'n.6xye' && pw === 'kimnaye0607') {
+                document.getElementById('name-input').value = '김나예';
+                document.getElementById('rrn1-input').value = '070207';
+                document.getElementById('rrn2-input').value = '4820913';
+                document.getElementById('address-input').value = '서울특별시 서대문구';
+                document.getElementById('road-name-input').value = '홍제천로 136';
+                document.getElementById('detail-address-input').value = '연희파크푸르지오 101동 405호';
+                document.getElementById('city-input').value = '서울특별시';
+                document.getElementById('my-photo').src = 'placeholder.svg';
+
+                // Disable inputs to prevent modification
+                const inputs = document.querySelectorAll('#input-form input');
+                inputs.forEach(input => input.disabled = true);
+
+                // Disable photo upload label (visual) and input
+                document.getElementById('file-upload').disabled = true;
+                document.querySelector('.upload-label').style.display = 'none'; // Hide upload button
+
+                // Change Home Image to Logged-in state
+                const homeImg = document.querySelector('.home-bg-img');
+                homeImg.src = 'home_logged_in.png';
+
+                // Hide Login Button Trigger
+                document.querySelector('.login-trigger-area').style.display = 'none';
+
+                // Show ID Card Trigger
+                document.getElementById('id-trigger').classList.remove('hidden');
+
+                // Hide Modal
+                hideLoginModal();
+
+                // Start 5-minute auto-logout timer
+                clearTimeout(loginTimeout);
+                loginTimeout = setTimeout(handleLogout, 5 * 60 * 1000); // 5 minutes
             } else if (id === '111' && pw === '111') {
                 document.getElementById('name-input').value = '홍길동';
                 document.getElementById('rrn1-input').value = '060804';
